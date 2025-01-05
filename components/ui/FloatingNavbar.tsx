@@ -86,6 +86,7 @@ export const FloatingNav = ({
             {navItem.name === "About" && (
               <div className="h-10">
                 <Image
+                  key={idx}
                   src="/logo.png"
                   alt="Logo"
                   width={500}
