@@ -8,7 +8,7 @@ const Grid = () => {
         {gridItems.map((item, i) => (
           <BentoGridItem
             id={item.id}
-            key={i}
+            key={item.id}
             title={item.title}
             description={item.description}
             // remove icon prop
