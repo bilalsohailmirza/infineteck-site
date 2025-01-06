@@ -17,6 +17,7 @@ export const FloatingNav = ({
   navItems: {
     name: string;
     link: string;
+    route: string;
     // icon?: JSX.Element;
   }[];
   className?: string;
@@ -75,7 +76,7 @@ export const FloatingNav = ({
           
             <Link
               key={navItem.name}
-              href={navItem.link}
+              href={navItem.route}
               className={cn(
                 "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
               )}
@@ -90,7 +91,7 @@ export const FloatingNav = ({
                   alt="Logo"
                   width={500}
                   height={500}
-                  className="h-full w-auto object-contain mx-4"
+                  className="h-full w-auto object-contain mx-2"
                 />
               </div>
           )}
