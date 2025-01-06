@@ -58,7 +58,7 @@ interface WorldProps {
   data: Position[];
 }
 
-let numbersOfRings = [0];
+let numbersOfRings = [1];
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const [globeData, setGlobeData] = useState<
@@ -189,7 +189,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .pointsData(data)
       .pointColor((e) => (e as { color: string }).color)
       .pointsMerge(true)
-      .pointAltitude(0.0)
+      .pointAltitude(0.01)
       .pointRadius(2);
 
     globeRef.current
@@ -236,7 +236,7 @@ export function WebGLRendererConfig() {
   useEffect(() => {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
-    gl.setClearColor(0xffaaff, 0);
+    gl.setClearColor(0xffaaff, 0x000000);
   }, []);
 
   return null;
